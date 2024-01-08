@@ -1,3 +1,2 @@
-# Delete-AWS-Rest-API
-Problem: API Gateway has the default quota of deleting REST API's which is set to 1 requests every 30 seconds per account. This can be very time consuming and annoying to sit in the console and manually delete each REST API.. The below python script allows you to delete all rest APIs using using the get_rest_apis boto3 API call and the delete_rest_apis API call to delete all REST API's within the account. 
-
+At the time of writing this, the DeleteRestApi call has a TPS of 1 request every 30 seconds. It can be annoying to sit and wait in the API Gateway console to manually delete REST API's, waiting 30 seconds between every delete operation. This article provides a python script which can be run in order to loop over all REST API's within an AWS region.
+To change the region, use `aws configure` locally or update boto3 client config to include the region.
